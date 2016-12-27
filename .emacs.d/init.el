@@ -4,7 +4,29 @@
 (require 'package)
 (package-initialize)
 
+(load "elscreen")
+(elscreen-start)
+(add-to-list 'load-path "~/Documents/Emacs/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
+  (add-hook 'neotree-mode-hook
+                        (lambda ()
+                                        (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+                                        (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+                                        (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+                                        (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
+(require 'powerline)
+(powerline-center-evil-theme)
+
+(require 'evil-magit)
+;; Tell emacs where is your personal elisp lib dir
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;; load the packaged named xyz.
+(load "evil-tabs") ;; best not to include the ending “.el” or “.elc”
+(global-evil-tabs-mode t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
