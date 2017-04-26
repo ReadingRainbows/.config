@@ -4,6 +4,7 @@
 (require 'package)
 (package-initialize)
 
+(load-theme 'suscolors t)
 (load "elscreen")
 (elscreen-start)
 (add-to-list 'load-path "~/Documents/Emacs/neotree")
@@ -45,5 +46,6 @@
 
 (setq inhibit-splash-screen t)
 (require 'org)
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode 1)
