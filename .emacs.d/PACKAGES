@@ -13,3 +13,10 @@ powerline
 suscolors-theme
 undo-tree
 with-editor
+evil-leader
+relative-line-numbers
+
+system packages:
+ctags
+
+
