@@ -1,0 +1,32 @@
+;; Object rapport_1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rapport_1/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("PRJNAME" variable (:default-value ("'marj2430'")) nil [1 22])
+            ("OUTDIR" variable (:default-value ("'output'")) nil [22 40])
+            ("all" function nil nil [41 185])
+            ("build" function nil nil [185 198])
+            ("run" function nil nil [198 226])
+            ("build-run" function nil nil [226 259])
+            ("clean" function nil nil [259 308])
+            ("filename" variable (:default-value ("main")) nil [306 306])
+            ("pdf" function (:arguments ("ps")) nil [306 306])
+            ("pdf-print" function (:arguments ("ps")) nil [306 306])
+            ("text" function (:arguments ("html")) nil [306 306])
+            ("html" function nil nil [306 306])
+            ("ps" function (:arguments ("dvi")) nil [306 306])
+            ("dvi" function nil nil [306 306])
+            ("read" function nil nil [306 306])
+            ("aread" function nil nil [306 306]))          
+      :file "Makefile"
+      :pointmax 309
+      :fsize 308
+      :lastmodtime '(22839 2568 958937 285000)
+      :unmatched-syntax nil))
+  :file "!home!zinzon!Documents!Session_4!App3!rapport_1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

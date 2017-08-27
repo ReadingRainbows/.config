@@ -1,0 +1,206 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Aug 18 14:39:29 2017
+;; Desktop file format version 206
+;; Emacs version 24.5.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22935 13409 162372 459000) (desktop . "206") "zinzon@Zinzon" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (foreground-color . "#d7af5f") (background-color . "#262626") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (alpha) (display-type . color) (background-mode . dark) (cursor-color . "white") (visibility) (powerline-cache) (frameset--id . "5B07-013F-3DF8-BA44") (frameset--mini t) (height . 10) (width . 10) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 0) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 54) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 124) (pixel-height . 162) (total-width . 13) (total-height . 9) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 16 2 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (foreground-color . "#d7af5f") (background-color . "#262626") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "white") (environment "PWD=/home/zinzon" "XDG_VTNR=7" "QT_ACCESSIBILITY=1" "GDMSESSION=lightdm-xsession" "SHELL=/bin/zsh" "SSH_AUTH_SOCK=/tmp/ssh-nUOGwO8ruhzB/agent.1132" "XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/zinzon" "XAUTHORITY=/home/zinzon/.Xauthority" "XDG_SESSION_DESKTOP=lightdm-xsession" "LANG=en_CA.UTF-8" "DISPLAY=:0" "XDG_RUNTIME_DIR=/run/user/1000" "XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0" "GDM_LANG=en_CA.utf8" "PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games" "XDG_SESSION_ID=2" "LOGNAME=zinzon" "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1" "XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0" "DESKTOP_SESSION=lightdm-xsession" "HOME=/home/zinzon" "SSH_AGENT_PID=1216" "XDG_SESSION_TYPE=x11" "XDG_SEAT=seat0" "LANGUAGE=en_CA:en" "USER=zinzon") (powerline-cache) (client . nowait) (frameset--id . "35A1-55FD-6CEA-C427") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":0") (explicit-name) (height . 54) (width . 209) (left . 0) (top . 22)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 180) (min-pixel-height-ignore . 54) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1916) (pixel-height . 955) (total-width . 213) (total-height . 53) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 954) (pixel-height . 955) (total-width . 106) (total-height . 53) (normal-height . 1.0) (normal-width . 0.4979123173277662) (buffer "*slime-repl sbcl*" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 16 2 t nil) (vscroll . 0) (dedicated) (point . 1349) (start . 1))) (leaf (last . t) (pixel-width . 962) (pixel-height . 955) (total-width . 107) (total-height . 53) (normal-height . 1.0) (normal-width . 0.5020876826722338) (buffer "Notes.org" (selected) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 16 2 t nil) (vscroll . 0) (dedicated) (point . 39209) (start . 37568)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("dired"))
+(setq regexp-search-ring '("$" "$i" "\\<10\\>" "hydra" "/" "slime" "\\<\\\\\\>" "$i." "/" "lamda" "lam" "lamda" "$hh" "/" "\\<\n\\>" "pour N"))
+(setq register-alist '((100 . "\\dfrac{}{}") (101 . "\\begin{equation}\n\\end{equation}\n") (113) (48 . "(merge 'vector '(1 2 3) '(3 2 5) #'<)\n") (97 . "\\begin{align*}\n\\end{align*}\n") (105)))
+(setq file-name-history '("~/Documents/Lisp/Notes/Notes.org" "~/Documents/TODO" "~/Documents/latex/CV-french-embedded/../Cover-letter/Cover-letter-french/main.tex" "~/Documents/latex/CV-french-embedded/main.tex" "~/Documents/latex/CV-french-embedded/" "~/Documents/latex/Cover-letter/Kinova_Robotic_Embedded_Engineer/main.tex" "~/Documents/Session_6/App1/Lectures.org" "~/Documents/Session_6/App1/Lectures" "~/Documents/Lisp/Notes/Notes.org" "~/Documents/Lisp/Exemple-pcl/funcall-ex.lisp" "~/.emacs.d/init.el" "~/.emacs.d/lisp/paredit.el" "~/.emacs.d/custom/init-paredit.el" "~/.emacs.d/init.el" "~/.emacs.d/custom/init-hydra.el" "~/.emacs.d/custom/init-slime.el" "~/.emacs.d/init.el" "~/Documents/Session_4/App6/Problématique/app6_mike.m" "~/Documents/Session_4/App6/Tutorat2.org" "~/Documents/Session_6/App5/Notes/Tutorat2.org" "~/Documents/Session_4/App6/Notes/Notes_ch7.org" "~/Documents/Session_4/App6/Notes_systèmes_multicadence.org" "~/Documents/Session_4/App6/Notes_cfa.org" "~/Documents/Session_4/App6/Notes_Cfa.org" "/home/zinzon/Documents/Lisp/Notes/Notes.org" "~/Documents/Lisp/Notes/Notes.org" "~/Documents/Lisp/Notes/Notes.pdf" "~/.emacs.d/init.el" "~/Documents/Session_4/App6/Notes_Conceptions_filtre_analogique" "~/Documents/Lisp/database.lisp" "~/Documents/Lisp/Notes/Notes.org" "~/Documents/Session_4/App4/../../Lisp/Notes/Notes.org" "~/Documents/Session_4/App4/remise/desm1927-marj2430/Matlab/Partie1.m" "~/Documents/Session_4/App5/../App4/ProblematiqueDARG.m" "~/Documents/Session_4/App5/problematique/../../App4/ProblematiqueDARG.m" "~/Documents/Session_4/App5/problematique/../App5.m" "~/Documents/Session_4/App5/problematique/Problematique.m" "~/Documents/Session_4/App5/problematique/Lab.m" "~/Documents/Session_4/App5/problematique/../App5.m" "~/Documents/Session_4/App4/ProblematiqueDARG.m" "~/Documents/Session_4/App5/problematique/Problematique.m" "~/Documents/Session_4/App4/ProblematiqueDARG.m" "~/Documents/Session_4/App5/problematique/Lab.m" "~/Documents/Session_4/App4/Lab.m" "~/Documents/Session_4/App4/Problematique.m" "~/Documents/Session_4/App5/problematique/Problematique.m" "~/Documents/Session_4/App5/problematique/Lab.m" "~/Documents/Session_4/App5/problematique/ProblematiqueDARG.m" "~/Documents/Session_4/App5/problematique/Problematique.m" "~/Documents/Session_4/App5/problematique/ProblematiqueDARG.m" "~/Documents/Lisp/database.lisp" "~/Documents/Session_4/App4/../../Lisp/hello-world.lisp" "~/Documents/Session_4/App4/Problematique.m" "~/Documents/Session_4/App4/Problematique_2.m" "~/Documents/Session_4/App4/Problematique.m" "~/Documents/Session_4/App4/Problematique_2.m" "~/Documents/Session_4/App4/Problematique.m" "~/Documents/Session_4/App4/Problematique_2.m"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Lisp/Notes/Notes.org"
+  "Notes.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  39209
+  '(39167 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/TODO"
+  "TODO"
+  'fundamental-mode
+  '(undo-tree-mode helm-mode)
+  652
+  '(652 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_4/App6/Notes/Notes_ch7.org"
+  "Notes_ch7.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  2443
+  '(2443 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/latex/Cover-letter/Cover-letter-french/main.tex"
+  "main.tex"
+  'latex-mode
+  '(undo-tree-mode helm-mode)
+  6530
+  '(6530 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Lisp/database.lisp"
+  "database.lisp"
+  'lisp-mode
+  '(paredit-mode slime-mode eldoc-mode undo-tree-mode helm-mode)
+  2245
+  '(1384 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/latex/CV-french-embedded/main.tex"
+  "main.tex"
+  'latex-mode
+  '(undo-tree-mode helm-mode)
+  5908
+  '(5908 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  nil
+  "CV-french-embedded"
+  'dired-mode
+  '(undo-tree-mode helm-mode)
+  257
+  '(257 nil)
+  t
+  '("/home/zinzon/Documents/latex/CV-french-embedded/")
+  '((overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/latex/Cover-letter/Kinova_Robotic_Embedded_Engineer/main.tex"
+  "main.tex"
+  'latex-mode
+  '(undo-tree-mode helm-mode)
+  3953
+  '(7862 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_6/App1/Lectures.org"
+  "Lectures.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  2388
+  '(2388 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_6/App5/Notes/Tutorat2.org"
+  "Tutorat2.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  5431
+  '(5431 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Lisp/Exemple-pcl/funcall-ex.lisp"
+  "funcall-ex.lisp"
+  'lisp-mode
+  '(paredit-mode slime-mode eldoc-mode undo-tree-mode helm-mode)
+  146
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/.emacs.d/custom/init-paredit.el"
+  "init-paredit.el"
+  'emacs-lisp-mode
+  '(paredit-mode undo-tree-mode helm-mode)
+  496
+  '(496 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/.emacs.d/custom/init-slime.el"
+  "init-slime.el"
+  'emacs-lisp-mode
+  '(paredit-mode undo-tree-mode helm-mode)
+  321
+  '(258 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(paredit-mode undo-tree-mode auto-revert-mode helm-mode)
+  158
+  '(158 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_4/App6/Notes_cfa.org"
+  "Notes_cfa.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  958
+  '(958 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_4/App6/Problématique/app6_mike.m"
+  "app6_mike.m"
+  'octave-mode
+  '(undo-tree-mode helm-mode)
+  718
+  '(718 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . iso-latin-1-dos) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/zinzon/Documents/Session_4/App6/Tutorat2.org"
+  "Tutorat2.org"
+  'org-mode
+  '(undo-tree-mode helm-mode)
+  13
+  '(13 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+

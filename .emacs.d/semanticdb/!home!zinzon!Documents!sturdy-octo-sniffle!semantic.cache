@@ -1,0 +1,330 @@
+;; Object sturdy-octo-sniffle/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sturdy-octo-sniffle/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [41 48])
+            ("CFLAGS" variable (:default-value ("-W" "-Wall" "-g")) nil [48 67])
+            ("LDFLAGS" variable (:default-value ("-shared")) nil [67 83])
+            ("EXEC" variable (:default-value ("budget")) nil [83 95])
+            ("SRC" variable (:default-value ("$(wildcard *.c)")) nil [95 115])
+            ("OBJ" variable (:default-value ("$(SRC:.c=.o)")) nil [115 132])
+            ("all" function (:arguments ("$(EXEC)")) nil [134 147])
+            ("budget" function (:arguments ("$(OBJ)")) nil [148 190])
+            ("%.o" function (:arguments ("%.c")) nil [191 229])
+            (".PHONY" function (:arguments ("clean" "mrproper")) nil [230 253])
+            ("clean" function nil nil [254 273])
+            ("mrproper" function (:arguments ("clean")) nil [274 306]))          
+      :file "Makefile"
+      :pointmax 306
+      :fsize 306
+      :lastmodtime '(22840 38799 312864 46000)
+      :unmatched-syntax nil)
+    (semanticdb-table "matrix.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_MATRIX_H" variable (:constant-flag t) nil [27 36])
+            ("_MATRIX_H" variable (:constant-flag t) nil [27 36])
+            ("_MATRIX_H" variable (:constant-flag t) nil [27 36])
+            ("_MATRIX_H" variable (:constant-flag t) nil [27 36])
+            ("_MATRIX_H" variable (:constant-flag t) nil [27 36])
+            ("stdio.h" include (:system-flag t) nil [38 56])
+            ("Matrix" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("Data" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [79 92])
+                          ("Column" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [97 111])
+                          ("Rows" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [116 128])
+                          ("PhysicalSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [133 153]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [58 163])
+            ("malloc_matrix" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("col" variable (:type "int") (reparse-symbol arg-sub-list) [187 195])
+                    ("row" variable (:type "int") (reparse-symbol arg-sub-list) [196 204]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [165 205])
+            ("calloc_matrix" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("col" variable (:type "int") (reparse-symbol arg-sub-list) [228 236])
+                    ("row" variable (:type "int") (reparse-symbol arg-sub-list) [237 245])
+                    ("itemsNumber" variable (:type "int") (reparse-symbol arg-sub-list) [246 262]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [206 263])
+            ("realloc_matrix" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("col" variable (:type "int") (reparse-symbol arg-sub-list) [287 295])
+                    ("row" variable (:type "int") (reparse-symbol arg-sub-list) [296 304]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [264 305])
+            ("get_matrix_column" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [332 347]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [307 348])
+            ("get_matrix_rows" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [372 387]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [349 388])
+            ("get_matrix_physical_size" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [421 436]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [389 437])
+            ("set_matrix_column" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tabCol" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [462 477])
+                    ("colNumber" variable (:type "int") (reparse-symbol arg-sub-list) [478 492])
+                    ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [493 508]))                  
+                :type "void")
+                nil [439 509])
+            ("set_matrix_rows" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tabRows" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [531 547])
+                    ("colRows" variable (:type "int") (reparse-symbol arg-sub-list) [548 560])
+                    ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [561 576]))                  
+                :type "void")
+                nil [510 577])
+            ("resize_matrix" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("col" variable (:type "int") (reparse-symbol arg-sub-list) [601 609])
+                    ("row" variable (:type "int") (reparse-symbol arg-sub-list) [609 617]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [579 618])
+            ("matrix_multiplication" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("matrix1" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [651 667])
+                    ("matrix2" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [668 684]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [621 685])
+            ("matrix_addition" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("matrix1" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [710 726])
+                    ("matrix2" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [727 743]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [686 744])
+            ("matrix_substraction" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("matrix1" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [773 789])
+                    ("matrix2" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [790 806]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [745 807])
+            ("matrix_inversion" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("matrix" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [833 848]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [808 849])
+            ("free_matrix" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("matrixToFree" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [868 889]))                  
+                :type "void")
+                nil [851 890]))          
+      :file "matrix.h"
+      :pointmax 901
+      :fsize 900
+      :lastmodtime '(22844 40144 501059 962000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_MATRIX_H")
+          )
+)
+    (semanticdb-table "fat_pointers.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("fat_pointers.h" include nil nil [1 26])
+            ("stdio.h" include (:system-flag t) nil [27 45])
+            ("stdlib.h" include (:system-flag t) nil [46 65])
+            ("alloc_array" function
+               (:pointer 1
+                :arguments 
+                  ( ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85 102])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [103 112]))                  
+                :type "void")
+                nil [67 262])
+            ("realloc_array" function
+               (:pointer 1
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [284 295])
+                    ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [296 313])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [314 323]))                  
+                :type "void")
+                nil [264 549])
+            ("dealloc_array" function
+               (:arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [570 581]))                  
+                :type "void")
+                nil [551 657])
+            ("get_array_length" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [680 691]))                  
+                :type "int")
+                nil [659 790]))          
+      :file "fat_pointers.c"
+      :pointmax 791
+      :fsize 790
+      :lastmodtime '(22840 39211 247335 271000)
+      :unmatched-syntax nil)
+    (semanticdb-table "fat_pointers.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_fat_pointers_h" variable (:constant-flag t) nil [33 48])
+            ("stdlib.h" include (:system-flag t) nil [50 69])
+            ("Header" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [90 99]))                  
+                :type "struct")
+                nil [70 102])
+            ("alloc_array" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122 139])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [140 149]))                  
+                :type "void")
+                nil [104 150])
+            ("dealloc_array" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [171 182]))                  
+                :type "void")
+                nil [152 183])
+            ("realloc_array" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [205 216])
+                    ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 234])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [235 244]))                  
+                :type "void")
+                nil [185 245])
+            ("get_array_length" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [268 279]))                  
+                :type "int")
+                nil [247 280]))          
+      :file "fat_pointers.h"
+      :pointmax 290
+      :fsize 289
+      :lastmodtime '(22840 39211 247335 271000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_fat_pointers_h")
+          )
+)
+    (semanticdb-table "matric.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("matrix.h" include nil nil [60 79])
+            ("malloc_matrix" function
+               (:pointer 1
+                :arguments 
+                  ( ("col" variable (:type "int") (reparse-symbol arg-sub-list) [103 111])
+                    ("row" variable (:type "int") (reparse-symbol arg-sub-list) [112 120]))                  
+                :type ("Matrix" type (:type "class") nil nil))
+                nil [81 176]))          
+      :file "matric.c"
+      :pointmax 177
+      :fsize 176
+      :lastmodtime '(22846 46915 160907 297000)
+      :unmatched-syntax nil))
+  :file "!home!zinzon!Documents!sturdy-octo-sniffle!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

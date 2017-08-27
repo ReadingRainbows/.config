@@ -1,0 +1,45 @@
+;; Object setjump/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "setjump/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [41 48])
+            ("CFLAGS" variable (:default-value ("-W" "-Wall" "-g")) nil [48 67])
+            ("LDFLAGS" variable nil nil [67 76])
+            ("EXEC" variable (:default-value ("setjmp")) nil [76 88])
+            ("SRC" variable (:default-value ("$(wildcard *.c)")) nil [88 108])
+            ("OBJ" variable (:default-value ("$(SRC:.c=.o)")) nil [108 125])
+            ("all" function (:arguments ("$(EXEC)")) nil [127 140])
+            ("setjmp" function (:arguments ("$(OBJ)")) nil [141 183])
+            ("%.o" function (:arguments ("%.c")) nil [184 222])
+            (".PHONY" function (:arguments ("clean" "mrproper")) nil [223 246])
+            ("clean" function nil nil [247 266])
+            ("mrproper" function (:arguments ("clean")) nil [267 299]))          
+      :file "Makefile"
+      :pointmax 299
+      :fsize 299
+      :lastmodtime '(22828 31708 263493 96000)
+      :unmatched-syntax nil)
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("setjmp.h" include (:system-flag t) nil [20 39])
+            ("test1" variable (:type ("jmp_buf" type (:type "class") nil nil)) nil [41 55])
+            ("tryjump" function (:type "void") nil [57 98])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [110 115]))                  
+                :type "int")
+                nil [100 292]))          
+      :file "main.c"
+      :pointmax 293
+      :fsize 292
+      :lastmodtime '(22828 31624 100612 253000)
+      :unmatched-syntax nil))
+  :file "!home!zinzon!Documents!C-programming!setjump!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,3 +1,9 @@
+;;(require 'org-init)
+;;(load ~/.emacs/config/org-mode/org-init.el)
+(add-to-list 'load-path "~/.emacs.d/custom/")
+(require 'paredit)
+(require 'init-paredit)
+(require 'init-slime)
 ;;tell where the program ctags is
 (setq path-to-ctags "/usr/bin/ctags")
 ;; tell where to store desktop save
@@ -54,14 +60,17 @@
 (setq c-default-style "stroustrup"
       c-basic-offset 4)
 (setq comment-style 'extraline)
-
 ;;relative-line-numbers
-(add-hook 'prog-mode-hook 'relative-line-numbers-mode t)
-(add-hook 'prog-mode-hook 'line-number-mode t)
-(add-hook 'prog-mode-hook 'column-number-mode t)
+;;(add-hook 'prog-mode-hook 'relative-line-numbers-mode t)
+;;(add-hook 'prog-mode-hook 'line-number-mode t)
+;;(add-hook 'prog-mode-hook 'column-number-mode t)
+
+
 
 ;;Evil doesnt come with ctrl+u as default so we get it now.
 (setq evil-want-C-u-scroll t)
+
+
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
                         ("org" . "http://orgmode.org/elpa/")
                         ("gnu" . "http://elpa.gnu.org/packages/")))
@@ -116,66 +125,10 @@
  )
 ;;Remove splash screen at startup
 (setq inhibit-splash-screen t)
-;;Use vim leader for extra shortcut
-(global-evil-leader-mode)
-;;define new leader function
-(evil-leader/set-key
-    "w" 'find-file-other-window
-    "f" 'find-file-other-frame
-    "q" 'kill-buffer-and-window
-    "x" 'kill-other-buffers
-    "k" 'elscreen-next
-    "j" 'elscreen-previous
-    "c" 'elscreen-create 
-    "e" 'find-file
-    "n" 'other-window
-    "<c" 'create-tags
-    "<t" 'find-tag
-    "<p" 'pop-tag-mark
-    "gb" 'gud-break
-    "gs" 'gud-step
-    "gn" 'gud-next
-    "gc" 'gud-cont
-    "gr" 'gud-remove
-    "hs" 'helm-semantic-or-imenu
-    "ss" 'session-save
-    "sl" 'session-load)
-;;gh	outline-up-heading
-;;gj	org-forward-heading-same-level
-;;gk	org-backward-heading-same-level
-;;gl	outline-next-visible-heading
-;;t	org-todo
-;;T	org-insert-todo-heading nil
-;;H	org-shiftleft
-;;J	org-shiftdown
-;;K	org-shiftup
-;;L	org-shiftright
-;;o	always-insert-item
-;;O	org-insert-heading
-;;’$’	org-end-of-line
-;;’^’	org-beginning-o-line
-;;<	org-metaleft
-;;>	org-metaright
-;;<leader>a	org-agenda
-;;<leader>t	org-show-todo-tree
-;;<leader>c	org-archive-subtree
-;;<leader>l	evil-org-open-links
-;;<leader>o	evil-org-recompute-clocks
-;;TAB	org-cycle
-;;M-l	org-metaright
-;;M-h	org-metaleft
-;;M-k	org-metaup
-;;M-j	org-metadown
-;;M-L	org-shiftmetaright
-;;M-H	org-shiftmetaleft
-;;M-K	org-shiftmetaup
-;;M-J	org-shiftmetadown
-;;M-o	org-insert-heading+org-metaright
-;;M-t	org-insert-todo-heading nil+ org-metaright
-(evil-leader/set-leader "<SPC>")
-(setq evil-leader/in-all-states 1)
-;; Set up evil-org
-;; Set up helm
+
+;;avy set-up timer
+(setq avy-timeout-seconds 0.2)
+
 (require 'helm-config)
 (helm-mode 1)
 

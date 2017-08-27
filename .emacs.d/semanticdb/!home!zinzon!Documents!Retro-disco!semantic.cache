@@ -1,0 +1,1021 @@
+;; Object Retro-disco/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Retro-disco/"
+  :tables
+  (list
+    (semanticdb-table "database.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("time.h" include (:system-flag t) nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("_file_handling_h" variable (:constant-flag t) nil [71 87])
+            ("DataType" type
+               (:members 
+                  ( ("MONEY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [359 365])
+                    ("TIME" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [370 375])
+                    ("OPERATION_TYPE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [380 396]))                  
+                :type "enum")
+                nil [331 407])
+            ("Data_type" type
+               (:typedef ("DataType" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [331 407])
+            ("DataTypeUnion" type
+               (:members 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol classsubparts) [443 458])
+                    ("t" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [463 472])
+                    ("ucptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [477 489]))                  
+                :type "union")
+                nil [409 508])
+            ("Data_type_union" type
+               (:typedef ("DataTypeUnion" type (:type "union") nil nil)
+                :type "typedef")
+                nil [409 508])
+            ("Operation" type
+               (:members 
+                  ( ("ID" variable (:type "unsigned int") (reparse-symbol classsubparts) [559 575])
+                    ("is_set" variable (:type "unsigned int") (reparse-symbol classsubparts) [578 598])
+                    ("operation_type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [601 622])
+                    ("money" variable (:type "unsigned int") (reparse-symbol classsubparts) [625 644])
+                    ("time" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [647 659]))                  
+                :type "struct")
+                nil [538 662])
+            ("Database" type
+               (:members 
+                  ( ("max_data" variable (:type "int") (reparse-symbol classsubparts) [713 726])
+                    ("max_rows" variable (:type "int") (reparse-symbol classsubparts) [731 744])
+                    ("rows" variable
+                       (:pointer 1
+                        :type ("Operation" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [749 772]))                  
+                :type "struct")
+                nil [691 776])
+            ("Connection" type
+               (:members 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [880 891])
+                    ("db" variable
+                       (:pointer 1
+                        :type ("Database" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [897 917]))                  
+                :type "struct")
+                nil [856 920])
+            ("open_database" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1083 1104])
+                    ("max_data" variable (:type "int") (reparse-symbol arg-sub-list) [1105 1118])
+                    ("max_rows" variable (:type "int") (reparse-symbol arg-sub-list) [1119 1132]))                  
+                :type ("Connection" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1050 1133])
+            ("load_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1234 1258]))                  
+                :type "int")
+                nil [1216 1259])
+            ("read_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1281 1305]))                  
+                :type "void")
+                nil [1262 1306])
+            ("populate_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1402 1426]))                  
+                :type "void")
+                nil [1379 1427])
+            ("close_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1519 1543]))                  
+                :type "void")
+                nil [1499 1544])
+            ("write_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1658 1682]))                  
+                :type "int")
+                nil [1639 1683])
+            ("set_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1798 1822])
+                    ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1823 1830])
+                    ("amount_money" variable (:type "int") (reparse-symbol arg-sub-list) [1831 1848])
+                    ("operation_done" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1849 1876]))                  
+                :type "void")
+                nil [1780 1877])
+            ("get_database" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1968 1992])
+                    ("data" variable (:type ("Data_type_union" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1993 2014])
+                    ("dataType" variable (:type ("Data_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2015 2034]))                  
+                :type ("Operation" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1937 2035])
+            ("reset_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2129 2153]))                  
+                :type "void")
+                nil [2109 2154])
+            ("delete_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2249 2273]))                  
+                :type "void")
+                nil [2228 2274]))          
+      :file "database.h"
+      :pointmax 2282
+      :fsize 2286
+      :lastmodtime '(22824 56152 93340 436000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_file_handling_h")
+          )
+)
+    (semanticdb-table "database.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("time.h" include (:system-flag t) nil [20 37])
+            ("stdlib.h" include (:system-flag t) nil [38 57])
+            ("errno.h" include (:system-flag t) nil [58 76])
+            ("assert.h" include (:system-flag t) nil [77 96])
+            ("string.h" include (:system-flag t) nil [97 116])
+            ("fcntl.h" include (:system-flag t) nil [117 135])
+            ("unistd.h" include (:system-flag t) nil [136 155])
+            ("database.h" include nil nil [156 177])
+            ("fat_pointers.h" include nil nil [178 203])
+            ("error_handling.h" include nil nil [204 231])
+            ("open_database" function
+               (:pointer 1
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [395 416])
+                    ("max_data" variable (:type "int") (reparse-symbol arg-sub-list) [417 430])
+                    ("max_rows" variable (:type "int") (reparse-symbol arg-sub-list) [431 444]))                  
+                :type ("Connection" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [362 1115])
+            ("read_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1217 1241]))                  
+                :type "void")
+                nil [1198 1801])
+            ("populate_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1917 1941]))                  
+                :type "void")
+                nil [1894 2830])
+            ("close_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2854 2878]))                  
+                :type "void")
+                nil [2834 3258])
+            ("write_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3371 3395]))                  
+                :type "int")
+                nil [3352 4474])
+            ("set_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4589 4613])
+                    ("id" variable (:type "int") (reparse-symbol arg-sub-list) [4614 4621])
+                    ("amount_money" variable (:type "int") (reparse-symbol arg-sub-list) [4622 4639])
+                    ("operation_done" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4640 4667]))                  
+                :type "void")
+                nil [4571 5059])
+            ("get_database" function
+               (:pointer 1
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5157 5181])
+                    ("data" variable (:type ("Data_type_union" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5182 5203])
+                    ("dataType" variable (:type ("Data_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5204 5223]))                  
+                :type ("Operation" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5126 6652])
+            ("reset_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6742 6766]))                  
+                :type "void")
+                nil [6722 7057])
+            ("delete_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7152 7176]))                  
+                :type "void")
+                nil [7131 7842]))          
+      :file "database.c"
+      :pointmax 7843
+      :fsize 7843
+      :lastmodtime '(22833 62850 790068 95000)
+      :unmatched-syntax nil)
+    (semanticdb-table "debug.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("debug.h" include nil nil [60 78])
+            ("database.h" include nil nil [79 100])
+            ("fat_pointers.h" include nil nil [101 126])
+            ("error_handling.h" include nil nil [127 154])
+            ("conn" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("Connection" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [156 194])
+            ("debug_database" function
+               (:arguments 
+                  ( ("routine" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [216 229]))                  
+                :type "void")
+                nil [196 585])
+            ("routine_check_memory_money" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [619 624]))                  
+                :type "void")
+                nil [587 1141])
+            ("routine_check_memory_operation" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1179 1184]))                  
+                :type "void")
+                nil [1143 1881])
+            ("routine_read_file" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1906 1911]))                  
+                :type "void")
+                nil [1883 2879])
+            ("routine_write_file_human_readable" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2920 2925]))                  
+                :type "void")
+                nil [2881 3206])
+            ("routine_test_write_read" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3237 3242]))                  
+                :type "void")
+                nil [3208 3762])
+            ("debug_read_database" function
+               (:arguments 
+                  ( ("connRead" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3789 3817])
+                    ("connWritten" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3818 3849]))                  
+                :type "void")
+                nil [3764 4495])
+            ("debug_write_database" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4523 4547]))                  
+                :type "void")
+                nil [4497 6493]))          
+      :file "debug.c"
+      :pointmax 6494
+      :fsize 6493
+      :lastmodtime '(22831 27059 616492 624000)
+      :unmatched-syntax nil)
+    (semanticdb-table "debug.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_DEBUG_H" variable (:constant-flag t) nil [26 34])
+            ("database.h" include nil nil [36 57])
+            ("debug_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("routine" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [79 92]))                  
+                :type "void")
+                nil [59 93])
+            ("routine_check_memory_money" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [126 131]))                  
+                :type "void")
+                nil [94 132])
+            ("routine_check_memory_operation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [170 175]))                  
+                :type "void")
+                nil [134 176])
+            ("routine_read_file" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [200 205]))                  
+                :type "void")
+                nil [177 206])
+            ("routine_write_file_human_readable" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [247 252]))                  
+                :type "void")
+                nil [208 253])
+            ("routine_test_write_read" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [284 289]))                  
+                :type "void")
+                nil [255 290])
+            ("debug_read_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("connRead" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [317 345])
+                    ("connWritten" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [346 377]))                  
+                :type "void")
+                nil [292 378])
+            ("debug_write_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("Connection" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [406 430]))                  
+                :type "void")
+                nil [380 431]))          
+      :file "debug.h"
+      :pointmax 440
+      :fsize 439
+      :lastmodtime '(22825 48775 379607 239000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_DEBUG_H")
+          )
+)
+    (semanticdb-table "fat_pointers.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_fat_pointers_h" variable (:constant-flag t) nil [33 48])
+            ("stdlib.h" include (:system-flag t) nil [50 69])
+            ("Header" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [90 99]))                  
+                :type "struct")
+                nil [70 102])
+            ("alloc_array" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122 139])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [140 149]))                  
+                :type "void")
+                nil [104 150])
+            ("dealloc_array" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [171 182]))                  
+                :type "void")
+                nil [152 183])
+            ("realloc_array" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [205 216])
+                    ("data_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 234])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [235 244]))                  
+                :type "void")
+                nil [185 245])
+            ("get_array_length" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [268 279]))                  
+                :type "int")
+                nil [247 280]))          
+      :file "fat_pointers.h"
+      :pointmax 290
+      :fsize 289
+      :lastmodtime '(22823 15921 142051 560000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_fat_pointers_h")
+          )
+)
+    (semanticdb-table "interpreter.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("ctype.h" include (:system-flag t) nil [60 78])
+            ("interpreter.h" include nil nil [79 103])
+            ("debug.h" include nil nil [104 122])
+            ("ENTRY_TABLE_SIZE" variable (:constant-flag t) nil [132 148])
+            ("delimiters" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\" \\n(,);\""
+                :type "char")
+                nil [153 188])
+            ("tab" variable
+               (:dereference 1
+                :default-value "{
+	{\"add\", cmd_add, \"i\", \"Add money to database.\"},
+	{\"substract\", cmd_substract, \"i\", \"Substract money to database.\"},
+	{\"set\", cmd_set, \"i\", \"Set money amount to database.\"},
+	{\"exit\", cmd_exit, \" \", \"Exit the program.\"},
+	{\"debug_database\", cmd_debug_database, \"i\", \"Routine to debug the program\"},
+}"
+                :type ("entry_t" type (:type "class") nil nil))
+                nil [190 510])
+            ("cmd_add" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [525 538]))                  
+                :type "void")
+                nil [512 595])
+            ("cmd_substract" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [616 629]))                  
+                :type "void")
+                nil [597 683])
+            ("cmd_set" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [699 712]))                  
+                :type "void")
+                nil [686 766])
+            ("cmd_exit" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [782 795]))                  
+                :type "void")
+                nil [768 822])
+            ("cmd_debug_database" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [848 861]))                  
+                :type "void")
+                nil [824 966])
+            ("run_interpreter" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [988 993]))                  
+                :type "int")
+                nil [968 1077])
+            ("EXIT" variable (:constant-flag t) nil [1087 1091])
+            ("args_parse" function
+               (:pointer 1
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1173 1187]))                  
+                :type ("args_t" type (:type "class") nil nil))
+                nil [1154 1870])
+            ("parse" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1894 1904]))                  
+                :type "int")
+                nil [1884 2310]))          
+      :file "interpreter.c"
+      :pointmax 2312
+      :fsize 2311
+      :lastmodtime '(22824 59076 552964 562000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ENTRY_TABLE_SIZE" . ((number "5" 149 . 150)))
+          )
+)
+    (semanticdb-table "interpreter.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_interpreter_h" variable (:constant-flag t) nil [32 46])
+            ("args_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("s" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [65 73])
+                          ("c" variable (:type "char") (reparse-symbol classsubparts) [75 83])
+                          ("i" variable (:type "int") (reparse-symbol classsubparts) [85 93])
+                          ("f" variable (:type "float") (reparse-symbol classsubparts) [95 103]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [48 113])
+            ("entry_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("name" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [133 150])
+                          ("func" function
+                             (:prototype-flag t
+                              :function-pointer t
+                              :arguments 
+                                ( ("" variable
+                                     (:pointer 1
+                                      :type ("args_t" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [165 173]))                                
+                              :type "void")
+                              (reparse-symbol classsubparts) [152 174])
+                          ("args" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [176 193])
+                          ("description" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [195 219]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [115 231])
+            ("run_interpreter" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [253 258]))                  
+                :type "int")
+                nil [233 259])
+            ("parse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [305 315]))                  
+                :type "int")
+                nil [295 316])
+            ("args_parse" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [336 350]))                  
+                :type ("args_t" type (:type "class") nil nil))
+                nil [317 351])
+            ("cmd_add" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [366 379]))                  
+                :type "void")
+                nil [353 380])
+            ("cmd_substract" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [400 413]))                  
+                :type "void")
+                nil [381 414])
+            ("cmd_set" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [428 441]))                  
+                :type "void")
+                nil [415 442])
+            ("cmd_exit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [457 470]))                  
+                :type "void")
+                nil [443 471])
+            ("cmd_debug_database" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("args_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [496 509]))                  
+                :type "void")
+                nil [472 510]))          
+      :file "interpreter.h"
+      :pointmax 519
+      :fsize 518
+      :lastmodtime '(22838 59638 289510 10000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_interpreter_h")
+          )
+)
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("getopt.h" include (:system-flag t) nil [60 79])
+            ("interpreter.h" include nil nil [80 104])
+            ("VERSION" variable (:constant-flag t) nil [114 121])
+            ("cli_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [153 170]))                  
+                :type "void")
+                nil [131 368])
+            ("cli_abort_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [398 403]))                  
+                :type "void")
+                nil [370 483])
+            ("cli_version_opt_call" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [518 535])
+                    ("version" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [536 556]))                  
+                :type "void")
+                nil [485 632])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [643 652])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [653 666]))                  
+                :type "int")
+                nil [634 1778]))          
+      :file "main.c"
+      :pointmax 1779
+      :fsize 1778
+      :lastmodtime '(22824 33232 504605 663000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VERSION" . ((string "\"0.0.1\"" 122 . 129)))
+          )
+)
+    (semanticdb-table "error_handling.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdarg.h" include (:system-flag t) nil [1 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("stdio.h" include (:system-flag t) nil [41 59])
+            ("sys/types.h" include (:system-flag t) nil [60 82])
+            ("unistd.h" include (:system-flag t) nil [83 102])
+            ("errno.h" include (:system-flag t) nil [103 121])
+            ("string.h" include (:system-flag t) nil [122 141])
+            ("error_handling.h" include nil nil [142 169])
+            ("ename.c.inc" include nil nil [170 192])
+            ("Boolean" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("FALSE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [209 215])
+                          ("TRUE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [216 222]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [194 231])
+            ("terminate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("useExit3" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [256 273]))                  
+                :type "void")
+                nil [234 439])
+            ("outputError" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("useErr" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [465 480])
+                    ("err" variable (:type "int") (reparse-symbol arg-sub-list) [481 489])
+                    ("flushStdout" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [490 510])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [511 530])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [531 542]))                  
+                :type "void")
+                nil [441 1071])
+            ("errMsg" function
+               (:arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1085 1104])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1105 1109]))                  
+                :type "void")
+                nil [1073 1333])
+            ("errExit" function
+               (:arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1348 1367])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1368 1372]))                  
+                :type "void")
+                nil [1335 1598])
+            ("errExitEN" function
+               (:arguments 
+                  ( ("errNum" variable (:type "int") (reparse-symbol arg-sub-list) [1615 1626])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1627 1646])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1647 1651]))                  
+                :type "void")
+                nil [1600 1805]))          
+      :file "error_handling.c"
+      :pointmax 1806
+      :fsize 1805
+      :lastmodtime '(22829 62557 409911 185000)
+      :unmatched-syntax nil)
+    (semanticdb-table "error_handling.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ERROR_HANDLING" variable (:constant-flag t) nil [33 48])
+            ("NORETURN" variable (:constant-flag t) nil [74 82])
+            ("errMsg" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [157 176])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [177 181]))                  
+                :type "void")
+                nil [145 182])
+            ("errExit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [196 215])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [216 220]))                  
+                :type "void")
+                nil [183 230])
+            ("errExitEN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("errNum" variable (:type "int") (reparse-symbol arg-sub-list) [246 257])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [258 277])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [278 282]))                  
+                :type "void")
+                nil [231 292]))          
+      :file "error_handling.h"
+      :pointmax 301
+      :fsize 300
+      :lastmodtime '(22829 61458 69389 893000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NORETURN" . ((symbol "__attribute__" 83 . 96) (semantic-list "((__noreturn__))" 97 . 113)))
+          ("_ERROR_HANDLING")
+          )
+)
+    (semanticdb-table "ename.c.inc"
+      :file "ename.c.inc"
+      :fsize 2119
+      :lastmodtime '(22829 60642 690737 450000)))
+  :file "!home!zinzon!Documents!Retro-disco!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
